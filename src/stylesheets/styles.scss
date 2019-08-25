@@ -1,0 +1,326 @@
+// Load CSS Reset from NPM
+@import "~normalize.css";
+@import "~font-awesome/css/all.css";
+@import "~font-awesome/css/brands.css";
+@import "~font-awesome/css/fontawesome.css";
+@import "~font-awesome/css/regular.css";
+@import "~font-awesome/css/solid.css";
+@import "~font-awesome/css/svg-with-js.css";
+@import "~font-awesome/css/v4-shims.css";
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/lato-v16-latin/lato-v16-latin-regular.eot');
+  src:
+    local('Lato Regular'),
+    local('Lato-Regular'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-regular.woff2') format('woff2'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-regular.woff') format('woff'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-regular.ttf') format('truetype'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-regular.svg#Lato') format('svg');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/lato-v16-latin/lato-v16-latin-italic.eot'); /* IE9 Compat Modes */
+  src:
+    local('Lato Italic'),
+    local('Lato-Italic'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-italic.woff2') format('woff2'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-italic.woff') format('woff'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-italic.ttf') format('truetype'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-italic.svg#Lato') format('svg');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/lato-v16-latin/lato-v16-latin-900.eot'); /* IE9 Compat Modes */
+  src:
+    local('Lato Black'),
+    local('Lato-Black'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-900.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-900.woff2') format('woff2'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-900.woff') format('woff'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-900.ttf') format('truetype'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-900.svg#Lato') format('svg');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 900;
+  src: url('../fonts/lato-v16-latin/lato-v16-latin-900italic.eot');
+  src:
+    local('Lato Black Italic'),
+    local('Lato-BlackItalic'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-900italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-900italic.woff2') format('woff2'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-900italic.woff') format('woff'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-900italic.ttf') format('truetype'),
+    url('../fonts/lato-v16-latin/lato-v16-latin-900italic.svg#Lato') format('svg');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/raleway-v14-latin/raleway-v14-latin-regular.eot');
+  src:
+    local('Raleway'),
+    local('Raleway-Regular'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-regular.woff2') format('woff2'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-regular.woff') format('woff'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-regular.ttf') format('truetype'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-regular.svg#Raleway') format('svg');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/raleway-v14-latin/raleway-v14-latin-italic.eot');
+  src:
+    local('Raleway Italic'),
+    local('Raleway-Italic'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-italic.woff2') format('woff2'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-italic.woff') format('woff'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-italic.ttf') format('truetype'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-italic.svg#Raleway') format('svg');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/raleway-v14-latin/raleway-v14-latin-900.eot');
+  src:
+    local('Raleway Black'),
+    local('Raleway-Black'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-900.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-900.woff2') format('woff2'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-900.woff') format('woff'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-900.ttf') format('truetype'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-900.svg#Raleway') format('svg');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 900;
+  src: url('../fonts/raleway-v14-latin/raleway-v14-latin-900italic.eot');
+  src:
+    local('Raleway Black Italic'),
+    local('Raleway-BlackItalic'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-900italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-900italic.woff2') format('woff2'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-900italic.woff') format('woff'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-900italic.ttf') format('truetype'),
+    url('../fonts/raleway-v14-latin/raleway-v14-latin-900italic.svg#Raleway') format('svg');
+}
+
+.wrapper {
+  overflow: hidden;
+  background-color: #fff;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+section {
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.font-lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.section-container {
+  width: 1000px;
+  margin: 0 auto;
+  max-width: 1000px;
+  border: 1px solid black;
+}
+
+.site-header {
+  overflow: hidden;
+  height: 200px;
+  padding: 0 250px;
+
+  .logo {
+    float: left;
+    height: 120px;
+    width: 233px;
+  }
+
+  .h1-logo {
+    text-align: right;
+  }
+
+  .site-navigation {
+    float: right;
+
+    li {
+      display: inline-block;
+      font-size: 45px;
+      padding-left: 42px;
+    }
+
+    a {
+      color: #999;
+    }
+
+    li a:hover {
+      color: #9FD86D;
+    }
+
+
+  }
+}
+
+.hero-section {
+  margin-bottom: 80px;
+}
+
+.site-believing {
+  background-color: #fafafa;
+}
+
+.site-about {
+  background-color: #fff;
+  text-align: center;
+
+  .members {
+    margin-top: 40px;
+
+    li {
+      display: inline-block;
+      width: 300px;
+      margin-bottom: 40px;
+
+      img {
+        width: 280px;
+        height: 280px;
+        overflow: hidden;
+        box-sizing: border-box;
+        box-shadow: 0 0 43px 67px #fff inset;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+      }
+    }
+  }
+
+  .members-p {
+    width: 600px;
+    text-align: center;
+    margin-left: 180px;
+  }
+}
+
+.site-map {
+  background-color: #fafafa;
+
+  .map-p {
+    width: 600px;
+    text-align: center;
+    margin-left: 180px;
+  }
+
+  .img-map {
+    height: auto;
+    width: 1000px;
+  }
+}
+
+.site-contact {
+  background-color: #fff;
+
+  .section-container {
+    overflow: hidden;
+    padding-top: 130px;
+  }
+
+  .contact-info {
+    float: left;
+    width: 400px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .contact-title {
+    color: #68a178;
+  }
+
+  .icon-navigation {
+    float: right;
+    display: inline-block;
+    width: 480px;
+
+    li {
+      position: relative;
+      display: inline-block;
+      height: 146px;
+      width: 146px;
+      border: 3px solid #eee;
+      border-radius: 50%;
+    }
+  }
+
+  a {
+    position: absolute;
+    display: block;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+  }
+
+  i {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #68a178;
+    font: 63px normal;
+  }
+}
+
+footer {
+  background-color: #108a7e;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+
+  .footer-info {
+    float: left;
+    text-align: left;
+  }
+
+  .footer-navigation {
+    float: right;
+    text-align: right;
+
+    li {
+      display: inline-block;
+      font-size: 45px;
+      padding-left: 42px;
+    }
+
+    i {
+      color: #fff;
+    }
+  }
+}
