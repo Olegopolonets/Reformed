@@ -1,13 +1,6 @@
 // Load CSS Reset from NPM
 @import "~normalize.css";
-//@import "~font-awesome-sass/assets/stylesheets/font-awesome";
-//@import "~node-modules/font-awesome/css/font-awesome.css";
-//@import "~font-awesome/css/brands.css";
-//@import "~font-awesome/css/fontawesome.css";
-//@import "~font-awesome/css/regular.css";
-//@import "~font-awesome/css/solid.css";
-//@import "~font-awesome/css/svg-with-js.css";
-//@import "~font-awesome/css/v4-shims.css";
+@import "~font-awesome/css/font-awesome.min.css";
 @import "~bootstrap/dist/css/bootstrap.css";
 
 @font-face {
@@ -211,6 +204,13 @@ h3 {
 
 .hero-section {
   margin-bottom: 80px;
+
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+    margin-left: 3px;
+  }
 }
 
 .site-believing {
