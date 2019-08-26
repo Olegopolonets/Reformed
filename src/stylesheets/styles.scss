@@ -1,12 +1,14 @@
 // Load CSS Reset from NPM
 @import "~normalize.css";
-@import "~font-awesome/css/all.css";
-@import "~font-awesome/css/brands.css";
-@import "~font-awesome/css/fontawesome.css";
-@import "~font-awesome/css/regular.css";
-@import "~font-awesome/css/solid.css";
-@import "~font-awesome/css/svg-with-js.css";
-@import "~font-awesome/css/v4-shims.css";
+//@import "~font-awesome-sass/assets/stylesheets/font-awesome";
+//@import "~node-modules/font-awesome/css/font-awesome.css";
+//@import "~font-awesome/css/brands.css";
+//@import "~font-awesome/css/fontawesome.css";
+//@import "~font-awesome/css/regular.css";
+//@import "~font-awesome/css/solid.css";
+//@import "~font-awesome/css/svg-with-js.css";
+//@import "~font-awesome/css/v4-shims.css";
+@import "~bootstrap/dist/css/bootstrap.css";
 
 @font-face {
   font-family: 'Lato';
@@ -128,6 +130,10 @@
     url('../fonts/raleway-v14-latin/raleway-v14-latin-900italic.svg#Raleway') format('svg');
 }
 
+ul {
+  padding-inline-start: 0;
+}
+
 .wrapper {
   overflow: hidden;
   background-color: #fff;
@@ -144,6 +150,21 @@ h1 {
   font-weight: normal;
 }
 
+h2 {
+  text-align: center;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 200;
+}
+
 .font-lato {
   font-family: 'Lato', sans-serif;
 }
@@ -152,13 +173,12 @@ h1 {
   width: 1000px;
   margin: 0 auto;
   max-width: 1000px;
-  border: 1px solid black;
 }
 
 .site-header {
   overflow: hidden;
   height: 200px;
-  padding: 0 250px;
+  padding: 0 160px;
 
   .logo {
     float: left;
@@ -184,10 +204,8 @@ h1 {
     }
 
     li a:hover {
-      color: #9FD86D;
+      color: #9fd86c;
     }
-
-
   }
 }
 
@@ -197,11 +215,49 @@ h1 {
 
 .site-believing {
   background-color: #fafafa;
+
+  .believing-title {
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .believing-items {
+    counter-reset: x;
+  }
+
+  .believing-item {
+    position: relative;
+    padding-left: 87px;
+  }
+
+  .believing-item::before {
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    // left: 12px;
+    //transform: translate(-50%, 0);
+    content: counter(x) " ";
+    counter-increment: x;
+    font: 55px 'Lato', sans-serif;
+    color: #5ccda3;
+    text-transform: uppercase;
+  }
 }
 
 .site-about {
   background-color: #fff;
   text-align: center;
+
+  .about-title {
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 20px;
+  }
 
   .members {
     margin-top: 40px;
@@ -234,15 +290,23 @@ h1 {
 .site-map {
   background-color: #fafafa;
 
+  h2 {
+    font-size: 50px;
+    color: #36988e;
+  }
+
   .map-p {
     width: 600px;
     text-align: center;
     margin-left: 180px;
+    font-size: 20px;
   }
 
   .img-map {
     height: auto;
     width: 1000px;
+    padding-bottom: 50px;
+    padding-top: 25px;
   }
 }
 
@@ -251,62 +315,76 @@ h1 {
 
   .section-container {
     overflow: hidden;
-    padding-top: 130px;
+    padding: 130px 0;
   }
 
   .contact-info {
     float: left;
     width: 400px;
-    font-size: 16px;
+    font-size: 20px;
     text-align: left;
-  }
 
-  .contact-title {
-    color: #68a178;
-  }
-
-  .icon-navigation {
-    float: right;
-    display: inline-block;
-    width: 480px;
-
-    li {
-      position: relative;
-      display: inline-block;
-      height: 146px;
-      width: 146px;
-      border: 3px solid #eee;
-      border-radius: 50%;
+    .contact-title {
+      text-align: left;
+      color: #8db899;
     }
   }
 
-  a {
-    position: absolute;
-    display: block;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-  }
+  .social-icons {
+    float: right;
+    display: inline-block;
+    width: 500px;
 
-  i {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #68a178;
-    font: 63px normal;
+    .social-item {
+      position: relative;
+      display: inline-block;
+      height: 144px;
+      width: 144px;
+      border: 2px solid #eee;
+      border-radius: 50%;
+      margin-left: 10px;
+
+      a {
+        position: absolute;
+        display: block;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+      }
+
+      i {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #9fd86c;
+        font-size: 61px;
+      }
+    }
+
+    li:hover {
+      background: #9fd86c;
+      border: 2px solid #9fd86c;
+      border-radius: 50%;
+
+      i {
+        color: #fff;
+      }
+    }
   }
 }
 
 footer {
   background-color: #108a7e;
-  height: 200px;
+  height: 50px;
   width: 100%;
+  padding: 64px 0;
   overflow: hidden;
   color: white;
 
   .footer-info {
     float: left;
     text-align: left;
+    font-size: 20px;
   }
 
   .footer-navigation {
@@ -321,6 +399,10 @@ footer {
 
     i {
       color: #fff;
+    }
+
+    li i:hover {
+      color: #999;
     }
   }
 }

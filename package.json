@@ -79,10 +79,12 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
+    "bootstrap": "4.3.1",
     "chalk": "^2.4.2",
     "clear": "^0.1.0",
     "enquirer": "^2.3.1",
     "figlet": "^1.2.3",
+    "font-awesome-sass": "^4.7.0",
     "ftp-deploy": "^2.3.3",
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
